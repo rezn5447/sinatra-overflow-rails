@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'user/index'
+  get 'users/index'
 
-  get 'user/show'
+  get 'users/show'
 
-  get 'user/new'
+  get 'users/new'
 
-  get 'user/create'
+  get 'users/create'
 
   resources :comments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
