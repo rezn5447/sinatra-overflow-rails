@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     if @user = User.find_by(name: params[:name]).try(:authenticate, params[:password])
       session[:id] = @user.id
-      redirect_to users_show_url(@user)
+      redirect_to users_url(@user)
     else
       render 'new'
     end
@@ -13,6 +13,4 @@ class SessionsController < ApplicationController
 
   def destroy
   end
-
-   private
 end
