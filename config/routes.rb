@@ -1,18 +1,10 @@
 Rails.application.routes.draw do
+  root 'users#index'
+  resources :sessions, only: [:new,:create,:destroy]
 
-  get 'sessions/new'
-
-  post 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'users/index'
-
-  get 'users/show'
-
-  get 'users/new'
-
-  post 'users/create'
+  resources :users, except: [:update, :edit, :destroy] do
+    resources :articles
+  end
 
   resources :comments
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
