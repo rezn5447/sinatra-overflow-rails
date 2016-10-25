@@ -1,7 +1,7 @@
 <h1>User#show</h1>
 <p>Find me in app/views/user/show.html.erb</p>
+<%= link_to 'logout' sessions_path %>
 
-
-<p>you're a new user!</p>
-
-<%= link_to  %>
+<p>You're a new user!</p>
+ <p>Welcome <%= @user.name %> !</p>
+<%= link_to 'Create Article' users_article_path %>

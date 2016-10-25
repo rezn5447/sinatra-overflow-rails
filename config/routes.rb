@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'articles/index'
+
+  get 'articles/create'
+
+  get 'articles/destroy'
+
   root 'users#index'
   resources :sessions, only: [:new, :create, :destroy]
 
